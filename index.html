@@ -1,0 +1,89 @@
+<!--
+  File: index.html
+  Mục tiêu: minh họa cấu trúc HTML5 cơ bản gồm 1 tiêu đề, 1 đoạn văn, 1 hình ảnh, 1 liên kết.
+  Mọi dòng đều có chú thích tiếng Việt để bạn đọc hiểu từng thành phần.
+  Lưu ý: lưu file này trong một thư mục project; tạo thêm thư mục images/ và đặt ảnh example.jpg vào đó.
+-->
+
+<!DOCTYPE html>
+<!-- <!DOCTYPE html> khai báo tài liệu theo chuẩn HTML5 -->
+<html lang="vi">
+  <head>
+    <!-- Thẻ <head> chứa metadata: charset, viewport, title, liên kết css, mô tả -->
+    <meta charset="utf-8" />
+    <!-- mã hóa ký tự UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- responsive trên thiết bị di động -->
+    <title>Day 1 - Basic HTML Structure</title>
+    <!-- Tiêu đề xuất hiện trên tab trình duyệt -->
+    <meta
+      name="description"
+      content="Trang ví dụ: cấu trúc HTML cơ bản - Day 1"
+    />
+    <!-- mô tả cho SEO/preview -->
+    <!-- Nếu cần nối CSS: <link rel="stylesheet" href="style.css"> -->
+  </head>
+  <body>
+    <!-- Sử dụng các phần tử semantic giúp cấu trúc rõ ràng và truy cập tốt hơn -->
+    <header>
+      <!-- <h1>..</h1> đến <h6>..</h6> là các tiêu đề với mức độ quan trọng giảm dần -->
+      <h1>My First Web Page — Day 1</h1>
+    </header>
+
+    <main>
+      <!-- Paragraph: đoạn văn bản mô tả nội dung -->
+      <p id="intro">
+        Xin chào! Đây là trang HTML đơn giản gồm một tiêu đề, một đoạn văn, một
+        hình ảnh và một liên kết.
+      </p>
+
+      <!-- Hình ảnh: src là đường dẫn (relative/absolute), alt là mô tả thay thế (bắt buộc cho accessibility) -->
+      <figure>
+        <img src="images/example.jpg" alt="Hình minh họa: ví dụ bố cục" />
+        <figcaption>
+          Hình ví dụ (lưu trong thư mục images/example.jpg)
+        </figcaption>
+      </figure>
+
+      <!-- Liên kết: href trỏ tới URL; target='_blank' mở tab mới; rel='noopener noreferrer' để an toàn -->
+      <p>
+        Tham khảo tài liệu:
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+          target="_blank"
+          rel="noopener noreferrer"
+          >MDN Web Docs — HTML</a
+        >
+      </p>
+
+      <!-- Ví dụ danh sách không thứ tự và có thứ tự -->
+      <ul>
+        <li>Thẻ tiêu đề: &lt;h1&gt; … &lt;h6&gt;</li>
+        <li>Đoạn văn: &lt;p&gt;</li>
+        <li>Danh sách: &lt;ul&gt; / &lt;ol&gt; + &lt;li&gt;</li>
+      </ul>
+    </main>
+
+    <footer>
+      <p>Created on 14 August 2025</p>
+    </footer>
+
+    <!-- Ghi chú về đường dẫn ảnh:
+       - images/example.jpg là đường dẫn tương đối (relative). Tạo thư mục images/ trong cùng folder với index.html.
+       - Nếu dùng đường dẫn tuyệt đối (https://...) thì trình duyệt sẽ load từ internet.
+  -->
+
+    <!-- Git steps (thực hiện trong terminal, thư mục chứa index.html và images/):
+      1) git init
+      2) git add .
+      3) git commit -m "day01: basic html structure"
+      4) git branch -M main
+      5) git remote add origin <REMOTE_URL>
+      6) git push -u origin main
+
+      Lưu ý:
+      - Thay <REMOTE_URL> bằng URL bạn tạo trên GitHub (https hoặc ssh).
+      - Nếu bị lỗi xác thực (authentication), bạn cần cấu hình Git với Git Credential Manager hoặc tạo Personal Access Token (PAT) trên GitHub và dùng nó thay mật khẩu khi push qua HTTPS.
+      - Nếu bạn dùng VS Code, cài extension "Live Server" để preview và auto-reload khi sửa file.
+  --></body>
+</html>
